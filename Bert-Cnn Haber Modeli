@@ -6,7 +6,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.metrics import accuracy_score, classification_report
 
 
-data = pd.read_csv('temizler_yok_veri_seti.csv')
+data = pd.read_csv('model_egitim_veri.csv')
 
 
 title_texts = data['temizlenmis_title'].tolist()

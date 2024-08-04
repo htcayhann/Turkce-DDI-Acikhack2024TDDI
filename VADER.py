@@ -4,7 +4,7 @@ from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
 from collections import defaultdict
 
 
-# Türkçe duygu sözlüğünü pandas ile yükleme
+
 def load_sentiment_lexicon(file_path):
     lexicon = {}
     try:
@@ -58,11 +58,9 @@ def analyze_sentiment(text, analyzer):
     return compound_score, sentiment_label
 
 
-# Özelleştirilmiş duygu sözlüğünü yükle
 custom_lexicon_path = r'SWNetTR++.csv'  # Özelleştirilmiş sözlüğünüzün dosya yolu
 analyzer = create_custom_analyzer(custom_lexicon_path)
 
-# Analiz edilecek metinleri dosyadan yükleme
 texts_path = r'model_egitim_veri.csv'  # Analiz edilecek metinlerin dosya yolu
 columns_to_analyze = ['temizlenmis_title_lemmas', 'temizlenmis_description_lemmas']
 category_column = 'category'  # Kategori sütununun ismi
@@ -78,7 +76,6 @@ with open(texts_path, mode='r', encoding='utf-8') as file, open(output_file_path
     reader = csv.DictReader(file)
     writer = csv.writer(output_file)
 
-    # CSV başlık satırını yaz
     writer.writerow(['Text', 'Category', 'Score', 'Label'])
 
     for row in reader:
@@ -93,7 +90,6 @@ with open(texts_path, mode='r', encoding='utf-8') as file, open(output_file_path
             category_scores[category]['total_score'] += score
             category_scores[category]['count'] += 1
 
-# Kategori bazında ortalama duygu skorlarını hesapla ve dosyaya yaz
 with open(output_file_path, mode='a', newline='', encoding='utf-8') as output_file:
     writer = csv.writer(output_file)
     writer.writerow([])

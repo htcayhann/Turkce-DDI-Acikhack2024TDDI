@@ -1,0 +1,11 @@
+pandas 
+numpy
+tensorflow
+transformers
+sklearn
+csv
+VaderSentiment
+collections
+request
+stanza
+re

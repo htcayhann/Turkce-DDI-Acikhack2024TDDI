@@ -18,7 +18,8 @@ Kategori Modeli Sonuçları:
 
 
 
-![image](https://github.com/user-attachments/assets/e6c271a6-ffb6-4e54-a97f-866696ee34e1)
+![image](https://github.com/user-attachments/assets/045e6050-fd33-4539-aed2-bb3e6cd40e98)
+
 
 
 
@@ -43,7 +44,8 @@ komutu ile ortama yüklenebilir.
 
 
 
- ## Çalıştırma Adımları
+## Çalıştırma Adımları
+
 1.	Veri Toplama ve Hazırlık:
 o data.py: News API aracılığıyla veri çekilmesi.
 o	veriHazirlama.py: Verilerin gerekli formatta birleştirilmesi.

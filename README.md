@@ -3,13 +3,21 @@
 
 # Türkçe Haber Verilerinde Yalan Haber ve Kategori Tespiti Projesi
 
-Projemize Türkçe haber veri seti eksikliğini fark ederek başladık ve bu amaçla kategori ve doğruluk etiketleri olan bir veri setioluşturduk. Haber verilerimizi DDİ (Doğal Dil İşleme) yöntemleri ile temizleyip tokenize ettik ve duygu analizini çıkardık. Ardından eğitim için uygun modelleri denedik. Naive Bayes gibi klasik yöntemlerde 0 kategorisinin tahmininde başarıya ulaşamadık. Sadece Bert modeli de özellikle 0 kategorisi tahmininde başarılı olamadı. Gerekli literatür taramalarından sonra BERT-CNN hibrit modeli ile başarılı sonuç elde edebildik ve doğruluk modelinde doğruluk oranımız ......; kategori modelinde doğruluk oranımız %84,7 olarak bulunmuştur.
+Projemize Türkçe haber veri seti eksikliğini fark ederek başladık ve bu amaçla kategori ve doğruluk etiketleri olan bir veri setioluşturduk. Haber verilerimizi DDİ (Doğal Dil İşleme) yöntemleri ile temizleyip tokenize ettik ve duygu analizini çıkardık. Ardından eğitim için uygun modelleri denedik. Naive Bayes gibi klasik yöntemlerde 0 kategorisinin tahmininde başarıya ulaşamadık. Sadece Bert modeli de özellikle 0 kategorisi tahmininde başarılı olamadı. Gerekli literatür taramalarından sonra BERT-CNN hibrit modeli ile başarılı sonuç elde edebildik ve doğruluk modelinde doğruluk oranımız %81,25 ; kategori modelinde doğruluk oranımız %84,7 olarak bulunmuştur.
 
 Haber Doğruluk Modeli Sonuçları:
+
+
+
+
 ![image](https://github.com/user-attachments/assets/8dd98b7d-367a-4d28-a585-2091252faf07)
 
 
 Kategori Modeli Sonuçları:
+
+
+
+
 ![image](https://github.com/user-attachments/assets/e6c271a6-ffb6-4e54-a97f-866696ee34e1)
 
 

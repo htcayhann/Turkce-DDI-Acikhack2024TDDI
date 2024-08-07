@@ -34,12 +34,7 @@ Kategori Modeli Sonuçları:
 
 ## Gereksinimler
 
-Bu projeyi çalıştırmak için gerekli bağımlılıklar `requirements.txt` dosyasında listelenmiştir. Proje çalıştırılmak istendiğinde:
-
-```bash
-pip install -r requirements.txt
-
-
+Bu projeyi çalıştırmak için gerekli bağımlılıklar `requirements.txt` dosyasında listelenmiştir. 
 
 
 ## Çalıştırma Adımları

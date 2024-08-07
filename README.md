@@ -38,9 +38,6 @@ Bu projeyi çalıştırmak için gerekli bağımlılıklar `requirements.txt` do
 
 ```bash
 pip install -r requirements.txt
-'''
-
-komutu ile ortama yüklenebilir.
 
 
 
@@ -63,23 +60,14 @@ o	Model eğitimi için category_model.py ve bert_cnn_haber_model.py dosyasını 
 
 ## KAYNAKÇA
 
--	Yapay Zekâ Tabanlı Doğal Dil İşleme Yaklaşımını Kullanarak
-İnternet Ortamında Yayınlanmış Sahte Haberlerin Tespiti
-https://dergipark.org.tr/en/download/article-file/1817671
+- [Yapay Zekâ Tabanlı Doğal Dil İşleme Yaklaşımını Kullanarak İnternet Ortamında Yayınlanmış Sahte Haberlerin Tespiti](https://dergipark.org.tr/en/download/article-file/1817671)
 
--	Türkçe Haberlerin Tür Tespiti İçin Konu
-Modelleme Yöntemlerinin Karşılaştırılması
-https://www.researchgate.net/profile/Zekeriya-Gueven-2/publication/337526948_Comparison_of_Topic_Modeling_Methods_for_Type_Detection_of_Turkish_News/links/5de2c18e299bf10bc334f04c/Comparison-of-Topic-Modeling-Methods-for-Type-Detection-of-Turkish-News.pdf
+- [Türkçe Haberlerin Tür Tespiti İçin Konu Modelleme Yöntemlerinin Karşılaştırılması](https://www.researchgate.net/profile/Zekeriya-Gueven-2/publication/337526948_Comparison_of_Topic_Modeling_Methods_for_Type_Detection_of_Turkish_News/links/5de2c18e299bf10bc334f04c/Comparison-of-Topic-Modeling-Methods-for-Type-Detection-of-Turkish-News.pdf)
 
+- [Türkçe Haber Başlıklarından Konu Tespiti](https://www.researchgate.net/profile/Cengiz-Hark/publication/366153944_Turkce_Haber_Basliklarindan_Konu_Tespiti_Topic_Detection_from_Turkish_News_Texts/links/63934467e42faa7e75aced35/Tuerkce-Haber-Basliklarindan-Konu-Tespiti-Topic-Detection-from-Turkish-News-Texts.pdf)
 
--	Türkçe Haber Başlıklarından Konu Tespiti
-https://www.researchgate.net/profile/Cengiz-Hark/publication/366153944_Turkce_Haber_Basliklarindan_Konu_Tespiti_Topic_Detection_from_Turkish_News_Texts/links/63934467e42faa7e75aced35/Tuerkce-Haber-Basliklarindan-Konu-Tespiti-Topic-Detection-from-Turkish-News-Texts.pdf
+- [Twitter'da Makine Öğrenmesi Yöntemleriyle Sahte Haber Tespiti](https://dergipark.org.tr/en/download/article-file/3015090)
 
--	Twitter'da Makine Öğrenmesi Yöntemleriyle Sahte Haber Tespiti
-https://dergipark.org.tr/en/download/article-file/3015090
+- [BERT-CNN: Improving BERT for Requirements Classification using CNN](https://www.sciencedirect.com/science/article/pii/S187705092300234X?ref=pdf_download&fr=RR-2&rr=8af977b178d23632)
 
--	BERT-CNN: Improving BERT for Requirements Classification using CNN
-https://www.sciencedirect.com/science/article/pii/S187705092300234X?ref=pdf_download&fr=RR-2&rr=8af977b178d23632
-
--	KUISAIL at SemEval-2020 Task 12: BERT-CNN for Offensive Speech Identification in Social Media
-https://aclanthology.org/2020.semeval-1.271.pdf
+- [KUISAIL at SemEval-2020 Task 12: BERT-CNN for Offensive Speech Identification in Social Media](https://aclanthology.org/2020.semeval-1.271.pdf)

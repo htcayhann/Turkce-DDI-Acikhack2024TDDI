@@ -38,6 +38,7 @@ Bu projeyi çalıştırmak için gerekli bağımlılıklar `requirements.txt` do
 
 ```bash
 pip install -r requirements.txt
+'''
 
 komutu ile ortama yüklenebilir.
 

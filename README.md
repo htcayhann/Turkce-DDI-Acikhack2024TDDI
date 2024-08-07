@@ -22,7 +22,7 @@ Kategori Modeli Sonuçları:
 
 
 
-![Model Sonuç Fotoğrafları]()
+
 
 ## Özellikler
 

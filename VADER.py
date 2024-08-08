@@ -1,8 +1,5 @@
-import csv
 import pandas as pd
 from vaderSentiment.vaderSentiment import SentimentIntensityAnalyzer
-from collections import defaultdict
-
 
 
 def load_sentiment_lexicon(file_path):
@@ -31,18 +28,15 @@ def load_sentiment_lexicon(file_path):
 
     return lexicon
 
-
 def update_vader_lexicon(vader_analyzer, custom_lexicon):
     for word, score in custom_lexicon.items():
         vader_analyzer.lexicon[word] = score
-
 
 def create_custom_analyzer(custom_lexicon_path):
     analyzer = SentimentIntensityAnalyzer()
     custom_lexicon = load_sentiment_lexicon(custom_lexicon_path)
     update_vader_lexicon(analyzer, custom_lexicon)
     return analyzer
-
 
 def analyze_sentiment(text, analyzer):
     sentiment = analyzer.polarity_scores(text)
@@ -57,55 +51,18 @@ def analyze_sentiment(text, analyzer):
 
     return compound_score, sentiment_label
 
-
-custom_lexicon_path = r'SWNetTR++.csv'  # Özelleştirilmiş sözlüğünüzün dosya yolu
+custom_lexicon_path = r'SWNetTR++.csv'  
 analyzer = create_custom_analyzer(custom_lexicon_path)
 
-texts_path = r'model_egitim_veri.csv'  # Analiz edilecek metinlerin dosya yolu
-columns_to_analyze = ['temizlenmis_title_lemmas', 'temizlenmis_description_lemmas']
-category_column = 'category'  # Kategori sütununun ismi
+texts_path = r'model_egitim_veri.csv'  # Analiz edilecek metinler
 
-# Sonuçları kaydedeceğimiz dosya
-output_file_path = r'sentiment_analysis_results1.csv'
+df = pd.read_csv(texts_path, encoding='utf-8')
 
-# Kategori bazında ortalama duygu skorlarını hesaplamak için
-category_scores = defaultdict(lambda: {'total_score': 0, 'count': 0})
+df['combined_text'] = df['temizlenmis_title_lemmas'].fillna('') + ' ' + df['temizlenmis_description_lemmas'].fillna('')
 
-with open(texts_path, mode='r', encoding='utf-8') as file, open(output_file_path, mode='w', newline='',
-                                                                encoding='utf-8') as output_file:
-    reader = csv.DictReader(file)
-    writer = csv.writer(output_file)
+df['sentiment_score'] = df['combined_text'].apply(lambda x: analyze_sentiment(x, analyzer)[0])
+df['sentiment_label'] = df['combined_text'].apply(lambda x: analyze_sentiment(x, analyzer)[1])
 
-    writer.writerow(['Text', 'Category', 'Score', 'Label'])
-
-    for row in reader:
-        category = row.get(category_column, 'Unknown')
-
-        for column in columns_to_analyze:
-            text = row.get(column, '').strip()
-            score, label = analyze_sentiment(text, analyzer)
-            writer.writerow([text, category, score, label])  # Sonuçları yaz
-
-            # Kategori bazında skoru güncelle
-            category_scores[category]['total_score'] += score
-            category_scores[category]['count'] += 1
-
-with open(output_file_path, mode='a', newline='', encoding='utf-8') as output_file:
-    writer = csv.writer(output_file)
-    writer.writerow([])
-    writer.writerow(['Kategori', 'Ortalama Duygu Skoru', 'Genel Duygu Durumu'])
-
-    for category, scores in category_scores.items():
-        if scores['count'] > 0:
-            avg_score = scores['total_score'] / scores['count']
-            if avg_score >= 0.05:
-                overall_sentiment = 'pozitif'
-            elif avg_score == 0.00:
-                overall_sentiment = 'nötr'
-            else:
-                overall_sentiment = 'negatif'
-        else:
-            avg_score = 0
-            overall_sentiment = 'belirsiz'
-
-        writer.writerow([category, avg_score, overall_sentiment])
+output_path = r'desc_title_vader_results.csv'  
+df.to_csv(output_path, index=False, encoding='utf-8-sig')
+print(f"Sonuçlar {output_path} dosyasına kaydedildi.")

@@ -1,5 +1,5 @@
 # Turkce DDI Acikhack2024TDDI
- Teknofest Anlam Avcıları takımı olarak hazırladığımız Türkçe haber verileri üzerinden yalan haber tespiti, katagory sınıflandırma gibi DDİ işlemlerinin yapıldığı yarışma projesidir.
+ Teknofest Anlam Avcıları takımı (Hatice Ayhan ve Zeynep Zeytun) olarak hazırladığımız Türkçe haber verileri üzerinden yalan haber tespiti, katagory sınıflandırma gibi DDİ işlemlerinin yapıldığı yarışma projesidir. 
 
 # Türkçe Haber Verilerinde Yalan Haber ve Kategori Tespiti Projesi
 

@@ -9,3 +9,5 @@ collections
 request
 stanza
 re
+matplotlib
+seaborn

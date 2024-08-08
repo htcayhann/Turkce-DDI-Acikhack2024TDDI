@@ -48,9 +48,17 @@ o	veri_temizleme.py: Temizleme işlemi ve nihai veri oluşturma.
 o	stanza_tokken.py: Türkçe dil bilgisi yapısına göre tokenize ve lemmatize edilmesi.
 4.	Duygu Analizi:
 o	VADER.py: SWNetTR kütüphanesi ve VADER ile duygu analizi yapılması.
-5.	Model Eğitimi:
+o  haber_analiz.py ve category_analiz.py ile duygu_analiz.csv haber metinlerinin duygu durumu ve etiket oranları analiz edilmiştir.Sonuçlar Şekil.1 ve Şekil.2 olarak aşağıda verilmiştir.
+6.	Model Eğitimi:
 o	Daha fazla 0 etiketli haberlere ihtiyaç duyulduğu için teyit.org gibi sitelerden 0 etiketli veriler toplanmış ve model_egitim_veri.csv oluşturulmuştur.
 o	Model eğitimi için category_model.py ve bert_cnn_haber_model.py dosyasını kullanın.
+
+## Analiz Sonuçları
+![image](https://github.com/user-attachments/assets/b7ebd5eb-c4ef-4eff-a684-b9a6359db9b8)
+Şekil.1
+
+![image](https://github.com/user-attachments/assets/0719f429-4961-4e1f-a01e-a798fdc44c09)
+Şekil.2
 
 
 ## KAYNAKÇA
@@ -66,3 +74,5 @@ o	Model eğitimi için category_model.py ve bert_cnn_haber_model.py dosyasını 
 - [BERT-CNN: Improving BERT for Requirements Classification using CNN](https://www.sciencedirect.com/science/article/pii/S187705092300234X?ref=pdf_download&fr=RR-2&rr=8af977b178d23632)
 
 - [KUISAIL at SemEval-2020 Task 12: BERT-CNN for Offensive Speech Identification in Social Media](https://aclanthology.org/2020.semeval-1.271.pdf)
+- [SWNetTR Sözlük](https://github.com/swnettr/SWNetTR)
+  
